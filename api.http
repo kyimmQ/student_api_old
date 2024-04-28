@@ -1,0 +1,33 @@
+# download REST CLIENT extension on Vscode to send request using this file
+
+# get all student with empty query string
+GET http://localhost:8080/api/student?name=
+###
+# get all student with name that has pattern "James"
+GET http://localhost:8080/api/student?name=James
+###
+# get student with invalid id
+GET http://localhost:8080/api/student/1
+###
+# get student with valid id
+GET http://localhost:8080/api/student/2111234
+###
+# create new student
+POST http://localhost:8080/api/student
+Content-Type: application/json
+
+{
+    "stdId":2219876,
+    "stdName":"James Oliver",
+    "academicYear":2022
+}
+###
+# create new student
+POST http://localhost:8080/api/student
+Content-Type: application/json
+
+{
+    "stdId":2319876,
+    "stdName":"James Oliver",
+    "academicYear":2022
+}
